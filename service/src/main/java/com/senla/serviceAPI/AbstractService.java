@@ -5,7 +5,7 @@ import com.senla.dao.repository.CommonRepository;
 import com.senla.dto.AbstractDTO;
 import com.senla.dto.PageDTO;
 import com.senla.entity.AbstractEntity;
-import com.senla.exceptions.NotFoundException;
+//import com.senla.exceptions.NotFoundException;
 import com.senla.mapper.MapperAPI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

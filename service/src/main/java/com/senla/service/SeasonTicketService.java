@@ -1,10 +1,10 @@
 package com.senla.service;
 
-import com.example.dao.repository.SeasonTicketRepository;
-import com.example.dto.SeasonTicketDTO;
-import com.example.entity.SeasonTicket;
-import com.example.mapper.SeasonTicketMapper;
-import com.example.serviceAPI.AbstractService;
+import com.senla.dao.repository.SeasonTicketRepository;
+import com.senla.dto.SeasonTicketDTO;
+import com.senla.entity.SeasonTicket;
+import com.senla.mapper.SeasonTicketMapper;
+import com.senla.serviceAPI.AbstractService;
 import org.springframework.stereotype.Service;
 
 @Service

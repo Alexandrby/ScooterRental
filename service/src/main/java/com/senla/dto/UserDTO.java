@@ -4,14 +4,14 @@ import com.senla.entity.Role;
 
 import java.util.List;
 
-public class UserDto extends AbstractDTO{
+public class UserDTO extends AbstractDTO{
 
     private Integer loginId;
     private String login;
     private String password;
     private List<Integer> roles;
 
-    public UserDto(){}
+    public UserDTO(){}
 
     @Override
     public String toString() {

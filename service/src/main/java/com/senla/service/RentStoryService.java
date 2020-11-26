@@ -1,11 +1,11 @@
 package com.senla.service;
 
-import com.example.dao.repository.RentStoryRepository;
-import com.example.dto.PageDTO;
-import com.example.dto.RentStoryDTO;
-import com.example.entity.RentStory;
-import com.example.mapper.RentStoryMapper;
-import com.example.serviceAPI.AbstractService;
+import com.senla.dao.repository.RentStoryRepository;
+import com.senla.dto.PageDTO;
+import com.senla.dto.RentStoryDTO;
+import com.senla.entity.RentStory;
+import com.senla.mapper.RentStoryMapper;
+import com.senla.serviceAPI.AbstractService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;

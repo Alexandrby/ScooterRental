@@ -1,7 +1,7 @@
 package com.senla.mapper;
 
-import com.example.dto.ScooterDTO;
-import com.example.entity.Scooter;
+import com.senla.dto.ScooterDTO;
+import com.senla.entity.Scooter;
 import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 import java.util.Objects;
 
 @Component
-public class ScooterMapper implements com.example.mapper.MapperAPI<Scooter, ScooterDTO> {
+public class ScooterMapper implements MapperAPI<Scooter, ScooterDTO> {
 
     @Autowired
-    private com.example.mapper.MainMapper modelMapper;
+    private MainMapper modelMapper;
 
     private TypeMap<Scooter, ScooterDTO> toDTOTypeMap;
 

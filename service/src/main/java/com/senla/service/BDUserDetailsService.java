@@ -1,7 +1,7 @@
 package com.senla.service;
 
-import com.example.entity.LoginData;
-import com.example.entity.Role;
+import com.senla.entity.User;
+import com.senla.entity.Role;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

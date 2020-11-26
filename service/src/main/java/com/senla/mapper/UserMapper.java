@@ -2,6 +2,7 @@ package com.senla.mapper;
 
 import com.senla.dao.repository.RoleRepository;
 import com.senla.dto.LoginDataDto;
+import com.senla.dto.UserDTO;
 import com.senla.entity.User;
 import com.senla.entity.Role;
 import org.modelmapper.TypeMap;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Component
-public class UserMapper implements MapperAPI<LoginData, LoginDataDto> {
+public class UserMapper implements MapperAPI<User, UserDTO> {
 
     @Autowired
     private MainMapper modelMapper;

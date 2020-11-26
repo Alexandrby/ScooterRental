@@ -1,10 +1,10 @@
 package com.senla.service;
 
-import com.example.dao.repository.DiscountRepository;
-import com.example.dto.DiscountDTO;
-import com.example.entity.Discount;
-import com.example.mapper.DiscountMapper;
-import com.example.serviceAPI.AbstractService;
+import com.senla.dao.repository.DiscountRepository;
+import com.senla.dto.DiscountDTO;
+import com.senla.entity.Discount;
+import com.senla.mapper.DiscountMapper;
+import com.senla.serviceAPI.AbstractService;
 import org.springframework.stereotype.Service;
 
 @Service
