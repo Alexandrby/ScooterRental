@@ -1,7 +1,7 @@
 package com.senla.mapper;
 
-import com.example.dto.SeasonTicketDTO;
-import com.example.entity.SeasonTicket;
+import com.senla.dto.SeasonTicketDTO;
+import com.senla.entity.SeasonTicket;
 import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

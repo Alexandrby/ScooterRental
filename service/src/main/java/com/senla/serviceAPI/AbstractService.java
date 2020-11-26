@@ -1,4 +1,4 @@
-/*
+
 package com.senla.serviceAPI;
 
 import com.senla.dao.repository.CommonRepository;
@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 @Transactional
 public abstract class AbstractService<E extends AbstractEntity, D extends AbstractDTO, R extends CommonRepository<E>, M extends MapperAPI<E, D>>
-        implements com.example.serviceAPI.CommonService<D> {
+        implements com.senla.serviceAPI.CommonService<D> {
 
     private final Logger logger = LoggerFactory.getLogger(AbstractService.class);
 
@@ -76,4 +76,4 @@ public abstract class AbstractService<E extends AbstractEntity, D extends Abstra
             repository.deleteById(id);
         } else throw new NotFoundException("", id);
     }
-}*/
+}

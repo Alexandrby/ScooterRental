@@ -1,7 +1,7 @@
 package com.senla.mapper;
 
-import com.example.dto.RentPointDTO;
-import com.example.entity.RentPoint;
+import com.senla.dto.RentPointDTO;
+import com.senla.entity.RentPoint;
 import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ import java.util.Objects;
 public class RentPointMapper implements MapperAPI<RentPoint, RentPointDTO> {
 
     @Autowired
-    private com.example.mapper.MainMapper modelMapper;
+    private com.senla.mapper.MainMapper modelMapper;
 
     private TypeMap<RentPoint, RentPointDTO> toDTOTypeMap;
 

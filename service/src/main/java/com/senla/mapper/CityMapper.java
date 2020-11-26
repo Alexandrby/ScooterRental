@@ -1,7 +1,7 @@
 package com.senla.mapper;
 
-import com.example.dto.CityDTO;
-import com.example.entity.City;
+import com.senla.dto.CityDTO;
+import com.senla.entity.City;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

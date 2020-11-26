@@ -1,7 +1,7 @@
 package com.senla.mapper;
 
-import com.example.dto.DiscountDTO;
-import com.example.entity.Discount;
+import com.senla.dto.DiscountDTO;
+import com.senla.entity.Discount;
 import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

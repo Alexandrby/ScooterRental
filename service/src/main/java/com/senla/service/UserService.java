@@ -1,17 +1,35 @@
 package com.senla.service;
 
-import com.example.dao.repository.UserRepository;
-import com.example.dto.UserDTO;
-import com.example.entity.User;
-import com.example.mapper.UserMapper;
+import com.example.dao.repository.LoginDataRepository;
+import com.example.dto.LoginDataDto;
+import com.example.entity.LoginData;
+import com.example.mapper.LoginDataMapper;
 import com.example.serviceAPI.AbstractService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService extends AbstractService<User, UserDTO, UserRepository, UserMapper> {
+public class UserService extends AbstractService<LoginData, LoginDataDto, LoginDataRepository, LoginDataMapper> {
 
-    public UserService(UserRepository repository, UserMapper mapper) {
+    private final PasswordEncoder passwordEncoder;
+
+    public UserService(LoginDataRepository repository, LoginDataMapper mapper, @Autowired PasswordEncoder passwordEncoder ) {
         super(repository, mapper);
+        this.passwordEncoder = passwordEncoder;
     }
 
+    public LoginData findByLogin(String login) {
+        return repository.findByLogin(login);
+    }
+
+    public LoginData findByLoginAndPassword(String login, String password) {
+        LoginData loginData = findByLogin(login);
+        if (loginData != null) {
+            if (passwordEncoder.matches(password, loginData.getPassword())) {
+                return loginData;
+            }
+        }
+        return null;
+    }
 }

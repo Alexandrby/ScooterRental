@@ -1,6 +1,6 @@
 package com.senla.dto;
 
-import com.example.entity.Role;
+import com.senla.entity.Role;
 
 import java.util.List;
 
