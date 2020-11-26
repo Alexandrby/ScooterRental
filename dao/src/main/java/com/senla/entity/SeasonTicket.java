@@ -22,10 +22,10 @@ public class SeasonTicket extends AbstractEntity{
     private Integer costPerHour;
 
     @OneToOne
-    @JoinColumn(name = "UserId")
+    @JoinColumn(name = "profile_id")
     @NonNull
     @JsonIgnore
-    private User user;
+    private Profile profile;
 
     @Override
     public String toString() {

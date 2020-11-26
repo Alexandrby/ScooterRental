@@ -1,5 +1,7 @@
 package com.senla.repos;
 
-public interface ProfileRepository {
+import com.senla.entity.Profile;
+
+public interface ProfileRepository extends CommonRepository<Profile>{
 
 }

@@ -12,15 +12,14 @@ import java.util.List;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "rentpoint")
-public class RentPoint  {
+public class RentPoint  extends AbstractEntity {
 
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
-    private Integer rentPointId;
+    private Integer rent_point_id;
     @NonNull
-    private String coordinates;
-    @NonNull
+
     private String address;
     @NonNull
     private String phone;
@@ -36,8 +35,7 @@ public class RentPoint  {
     @Override
     public String toString() {
         return "RentPoint{" +
-                "Coordinates='" + coordinates + '\'' +
-                ", Address='" + address + '\'' +
+               ", Address='" + address + '\'' +
                 ", Phone='" + phone + '\'' +
                 '}';
     }

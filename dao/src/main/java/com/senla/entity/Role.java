@@ -12,8 +12,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "Role")
-public class Role  implements GrantedAuthority {
+/*@Table(name = "profile")*/
+public class Role extends AbstractEntity implements GrantedAuthority  {
 
     @Id
     @GeneratedValue(generator = "increment")
@@ -25,9 +25,9 @@ public class Role  implements GrantedAuthority {
 
 
     @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    @JoinTable(name = "LoginRole",
-            joinColumns = @JoinColumn(name = "RoleId"),
-            inverseJoinColumns = @JoinColumn(name = "LoginId"))
+    @JoinTable(name = "user",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id"))
     private List<User> loginDates;
 
     @Override

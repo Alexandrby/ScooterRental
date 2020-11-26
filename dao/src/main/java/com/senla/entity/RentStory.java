@@ -12,7 +12,7 @@ import javax.persistence.*;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "RentStory")
-public class RentStory  {
+public class RentStory extends AbstractEntity {
 
     @Id
     @GeneratedValue(generator = "increment")

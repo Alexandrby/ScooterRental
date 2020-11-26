@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "Scooter")
-public class Scooter  {
+public class Scooter extends AbstractEntity {
 
     @Id
     @GeneratedValue(generator = "increment")
