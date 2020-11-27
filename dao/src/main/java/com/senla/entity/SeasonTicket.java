@@ -21,9 +21,7 @@ public class SeasonTicket extends AbstractEntity{
     private Integer hoursLeft;
     private Integer costPerHour;
 
-    @OneToOne
-    @JoinColumn(name = "profile_id")
-    @NonNull
+    @OneToOne (mappedBy = "seasonTicket",cascade = CascadeType.ALL)
     @JsonIgnore
     private Profile profile;
 

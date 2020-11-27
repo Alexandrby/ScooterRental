@@ -1,7 +1,6 @@
 package com.senla.entity;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.jws.soap.SOAPBinding;
 import javax.persistence.*;
 import java.util.List;
@@ -19,27 +18,25 @@ public class Profile extends AbstractEntity  {
   @GenericGenerator(name = "increment", strategy = "increment")
   private Integer user_id;
 
-
   @NonNull
   private String first_name;
 
   @NonNull
   private String second_name;
 
-  @OneToOne(targetEntity = Discount.class)
+  @OneToOne(optional=false, cascade=CascadeType.ALL)
   @JoinColumn (name = "discount_id")
   private Discount discount;
 
-  @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-  @JoinColumn(name = "user_id")
+  @OneToOne(optional=false, cascade = CascadeType.ALL)
+  @JoinColumn(name = "profile_id")
   private User user;
+
+  @OneToOne(optional=false, cascade = CascadeType.ALL)
+  @JoinColumn(name = "profile_id")
+  private SeasonTicket seasonTicket;
 
   @OneToMany(mappedBy = "profile", fetch = FetchType.LAZY)
   private List<RentStory> rentStoryList;
-
-  @OneToOne(mappedBy = "profile",orphanRemoval = true)
-  private SeasonTicket seasonTicket;
-
-
 
 }

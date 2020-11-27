@@ -25,12 +25,12 @@ public class RentPoint  extends AbstractEntity {
     private String phone;
 
     @OneToMany(mappedBy = "rentPoint", cascade = CascadeType.ALL)
-    private List<com.senla.entity.Scooter> scooterList;
+    private List<Scooter> scooterList;
 
     @NonNull
     @ManyToOne(optional = false, cascade = CascadeType.ALL)
     @JoinColumn(name = "city_id")
-    private com.senla.entity.City city;
+    private City city;
 
     @Override
     public String toString() {

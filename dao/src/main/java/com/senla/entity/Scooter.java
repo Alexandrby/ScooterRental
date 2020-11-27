@@ -26,7 +26,7 @@ public class Scooter extends AbstractEntity {
     private ScooterStatus status;
 
     @ManyToOne(cascade = CascadeType.ALL )
-    @JoinColumn(name = "rentPointId")
+    @JoinColumn(name = "rent_point_id")
     private RentPoint rentPoint;
 
     @OneToMany(mappedBy = "scooter", orphanRemoval = true)

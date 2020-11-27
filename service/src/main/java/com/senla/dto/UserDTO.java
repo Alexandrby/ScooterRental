@@ -1,7 +1,5 @@
 package com.senla.dto;
 
-import com.senla.entity.Role;
-
 import java.util.List;
 
 public class UserDTO extends AbstractDTO{

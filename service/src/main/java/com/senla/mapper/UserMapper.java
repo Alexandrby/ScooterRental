@@ -4,7 +4,6 @@ import com.senla.dao.repository.RoleRepository;
 import com.senla.dto.LoginDataDto;
 import com.senla.dto.UserDTO;
 import com.senla.entity.User;
-import com.senla.entity.Role;
 import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

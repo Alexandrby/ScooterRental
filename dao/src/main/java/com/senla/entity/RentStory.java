@@ -18,16 +18,21 @@ public class RentStory extends AbstractEntity {
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
     private Integer rentStory_id;
+
     @NonNull
     private Integer rent_duration;
+
     @NonNull
     private Integer money;
+
     @NonNull
     private String paid_way;
+
     @ManyToOne( cascade = CascadeType.PERSIST)
     @JoinColumn(name = "profile_id")
     @JsonIgnore
-    private User user;
+    private Profile profile;
+
     @NonNull
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "scooter_id")

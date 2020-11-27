@@ -24,7 +24,7 @@ public class Discount  extends AbstractEntity{
 
     @OneToOne(mappedBy = "discount")
     @JsonIgnore
-    private User user;
+    private Profile profile;
 
     @Override
     public String toString() {

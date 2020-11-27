@@ -1,5 +1,4 @@
 package com.senla.entity;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -25,15 +24,11 @@ public class User extends AbstractEntity {
     @NonNull
     private String password;
 
- /*   @OneToOne(mappedBy = "discount",cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
     @JsonIgnore
     private Profile profile;
 
-    @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    @JoinTable(name = "user_role",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private List<Role> roles;*/
+
 
     @Override
     public String toString() {

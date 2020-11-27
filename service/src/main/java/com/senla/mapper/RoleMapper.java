@@ -1,7 +1,6 @@
 package com.senla.mapper;
 
 import com.senla.dto.RoleDTO;
-import com.senla.entity.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
