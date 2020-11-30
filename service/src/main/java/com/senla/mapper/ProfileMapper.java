@@ -1,7 +1,7 @@
 package com.senla.mapper;
 
-import com.senla.dto.UserDTO;
-import com.senla.entity.User;
+import com.senla.dto.ProfileDTO;
+import com.senla.entity.Profile;
 import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -9,23 +9,25 @@ import org.springframework.stereotype.Component;
 import java.util.Objects;
 
 @Component
-public class ProfileMapper implements MapperAPI<User, UserDTO>{
+public class ProfileMapper implements MapperAPI<Profile, ProfileDTO>{
 
     @Autowired
     private MainMapper modelMapper;
 
-    private TypeMap<User, UserDTO> toDTOTypeMap;
+    private TypeMap<Profile, ProfileDTO> toDTOTypeMap;
 
-    public UserDTO toDto(User user) {
+    public ProfileDTO toDto(Profile profile) {
         if (toDTOTypeMap == null) {
-            toDTOTypeMap = modelMapper.createTypeMap(User.class, UserDTO.class);
+            toDTOTypeMap = modelMapper.createTypeMap(Profile.class, ProfileDTO.class);
         }
-        toDTOTypeMap.addMappings(mapping -> mapping.map(singleSeasonTicket -> user.getDiscount().getDiscountId(), UserDTO::setDiscountId));
-        toDTOTypeMap.addMappings(mapping -> mapping.map(singleSeasonTicket -> user.getLoginData().getLoginId(), UserDTO::setLoginDataId));
-        return Objects.isNull(user) ? null : modelMapper.map(user, UserDTO.class);
+        toDTOTypeMap.addMappings(mapping -> mapping.map(/*singleSeasonTicket*/ -> profile.getDiscount().getDiscountId(), ProfileDTO::setDiscountId));
+  //      toDTOTypeMap.addMappings(mapping -> mapping.map(singleSeasonTicket -> profile.getLoginData().getLoginId(), UserDTO::setLoginDataId));
+        return Objects.isNull(profile) ? null : modelMapper.map(profile, ProfileDTO.class);
     }
 
-    public User toEntity(UserDTO userDTO) {
-        return Objects.isNull(userDTO) ? null : modelMapper.map(userDTO, User.class);
+
+
+    public Profile toEntity(ProfileDTO profileDTO) {
+        return Objects.isNull(profileDTO) ? null : modelMapper.map(profileDTO, Profile.class);
     }
 }

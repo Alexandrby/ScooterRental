@@ -2,7 +2,7 @@ package com.senla.controllers;
 
 import com.senla.dto.PageDTO;
 import com.senla.dto.ScooterDTO;
-import com.senla.service.ScooterService;
+import com.senla.services.ScooterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

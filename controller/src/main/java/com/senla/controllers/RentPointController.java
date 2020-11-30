@@ -2,7 +2,7 @@ package com.senla.controllers;
 
 import com.senla.dto.PageDTO;
 import com.senla.dto.RentPointDTO;
-import com.senla.service.RentPointService;
+import com.senla.services.RentPointService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,5 +1,8 @@
 package com.senla.dto;
 
+import lombok.Data;
+
+@Data
 public class RentPointDTO extends AbstractDTO{
 
     private Integer rentPointId;
@@ -8,7 +11,7 @@ public class RentPointDTO extends AbstractDTO{
     private String phone;
     private Integer cityId;
 
-    public RentPointDTO() {
+    /*public RentPointDTO() {
     }
 
     public Integer getRentPointId() {
@@ -50,5 +53,5 @@ public class RentPointDTO extends AbstractDTO{
 
     public void setCityId(int cityId) {
         this.cityId = cityId;
-    }
+    }*/
 }

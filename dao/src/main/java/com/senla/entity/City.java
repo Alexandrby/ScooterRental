@@ -1,5 +1,6 @@
 package com.senla.entity;
 
+import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -9,7 +10,6 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Entity
 @Table(name = "city")
 public class City extends AbstractEntity {
@@ -17,10 +17,12 @@ public class City extends AbstractEntity {
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
-    private Integer city_id;
+    @Column (name = "city_id")
+    private Integer cityId;
 
-    @NonNull
-    private String city_name;
+    @NotNull
+    @Column(name = "city_name")
+    private String cityName;
 
     @OneToMany(mappedBy = "city",orphanRemoval = true)
     private List<RentPoint> rentPointList;
@@ -28,7 +30,7 @@ public class City extends AbstractEntity {
     @Override
     public String toString() {
         return "City{" +
-                "CityName='" + city_name + '\'' +
+                "CityName='" + cityName + '\'' +
                 '}';
     }
 }

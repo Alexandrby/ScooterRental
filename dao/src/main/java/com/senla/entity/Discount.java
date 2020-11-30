@@ -1,15 +1,12 @@
 package com.senla.entity;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Entity
 @Table(name = "discount")
 public class Discount  extends AbstractEntity{
@@ -17,10 +14,12 @@ public class Discount  extends AbstractEntity{
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
-    private Integer discount_id;
+    @Column(name = "discount_id")
+    private Integer discountId;
 
     @NonNull
-    private Integer discount_rate;
+    @Column(name = "discount_rate")
+    private Integer discountRate;
 
     @OneToOne(mappedBy = "discount")
     @JsonIgnore
@@ -29,8 +28,8 @@ public class Discount  extends AbstractEntity{
     @Override
     public String toString() {
         return "Discount{" +
-                "DiscountId=" + getDiscount_id() +
-                ", DiscountRate=" + discount_rate +
+                "DiscountId=" + getDiscountId() +
+                ", DiscountRate=" + discountRate +
                 '}';
     }
 }

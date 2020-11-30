@@ -2,7 +2,7 @@ package com.senla.controllers;
 
 import com.senla.dto.DiscountDTO;
 import com.senla.dto.PageDTO;
-import com.senla.service.DiscountService;
+import com.senla.services.DiscountService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

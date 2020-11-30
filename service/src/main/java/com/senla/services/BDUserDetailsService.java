@@ -1,4 +1,4 @@
-package com.senla.service;
+package com.senla.services;
 
 import com.senla.entity.User;
 import org.slf4j.Logger;
@@ -19,7 +19,7 @@ public class BDUserDetailsService implements UserDetailsService {
     private Logger logger = LoggerFactory.getLogger(BDUserDetailsService.class);
 
     @Autowired
-    private com.example.service.LoginDataService service;
+    private LoginDataService service;
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {

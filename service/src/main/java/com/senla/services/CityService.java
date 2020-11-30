@@ -1,4 +1,4 @@
-package com.senla.service;
+package com.senla.services;
 
 
 import com.senla.CityDTO;

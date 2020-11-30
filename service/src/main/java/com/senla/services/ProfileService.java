@@ -1,9 +1,10 @@
-package com.senla.service;
+package com.senla.services;
 
-import com.senla.dao.repository.UserRepository;
+
 import com.senla.dto.UserDTO;
 import com.senla.entity.User;
 import com.senla.mapper.UserMapper;
+import com.senla.repos.UserRepository;
 import com.senla.serviceAPI.AbstractService;
 import org.springframework.stereotype.Service;
 

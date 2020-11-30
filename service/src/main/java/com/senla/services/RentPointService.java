@@ -1,9 +1,10 @@
-package com.senla.service;
+package com.senla.services;
 
-import com.senla.dao.repository.RentPointRepository;
+
 import com.senla.dto.RentPointDTO;
 import com.senla.entity.RentPoint;
 import com.senla.mapper.RentPointMapper;
+import com.senla.repos.RentPointRepository;
 import com.senla.serviceAPI.AbstractService;
 import org.springframework.stereotype.Service;
 

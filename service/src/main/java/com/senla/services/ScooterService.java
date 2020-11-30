@@ -1,9 +1,10 @@
-package com.senla.service;
+package com.senla.services;
 
-import com.senla.dao.repository.ScooterRepository;
+
 import com.senla.dto.ScooterDTO;
 import com.senla.entity.Scooter;
 import com.senla.mapper.ScooterMapper;
+import com.senla.repos.ScooterRepository;
 import com.senla.serviceAPI.AbstractService;
 import org.springframework.stereotype.Service;
 

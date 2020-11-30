@@ -1,6 +1,6 @@
 package com.senla.mapper;
 
-import com.senla.dao.repository.RoleRepository;
+import com.senla.repos.RoleRepository;
 import com.senla.dto.LoginDataDto;
 import com.senla.dto.UserDTO;
 import com.senla.entity.User;
@@ -8,6 +8,7 @@ import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +21,18 @@ public class UserMapper implements MapperAPI<User, UserDTO> {
     @Autowired
     private RoleRepository repository;
 
-    TypeMap<LoginData, LoginDataDto> toDTOTypeMap;
+    TypeMap<User, UserDTO> toDTOTypeMap;
 
-    public LoginDataDto toDto(LoginData loginData) {
+    public UserDTO toDto(User user ) {
         if (toDTOTypeMap == null) {
-            toDTOTypeMap = modelMapper.createTypeMap(LoginData.class, LoginDataDto.class);
+            UserDTO userDTO = modelMapper.map(user, UserDTO.class);
         }
-        toDTOTypeMap.addMappings(mapping -> mapping.map(singleLogin -> loginData.getRoles(), LoginDataDto::setRoles));
-        return Objects.isNull(loginData) ? null : modelMapper.map(loginData, LoginDataDto.class);
+        toDTOTypeMap.addMappings(mapping -> mapping.map(singleLogin -> User.getRoles(), UserDTO::setRoles));
+        return Objects.isNull(user) ? null : modelMapper.map(user, UserDTO.class);
     }
 
-    public LoginData toEntity(LoginDataDto loginDataDto) {
-        LoginData loginData = Objects.isNull(loginDataDto) ? null : modelMapper.map(loginDataDto, LoginData.class);
+   /* public User toEntity(UserDTO userDTO) {
+        User user = Objects.isNull(userDTO) ? null : modelMapper.map(userDTO, User.class);
         List<Role> roleList = new ArrayList<>();
         roleList.add(repository.getOne(2));
         // для создания по ролям на будущее
@@ -40,8 +41,8 @@ public class UserMapper implements MapperAPI<User, UserDTO> {
 //        ) {
 //            roleList.add(repository.getOne(roleId));
 //        }
-        loginData.setRoles(roleList);
-        return loginData;
+        user.setRoles(roleList);
+        return user;*/
     }
 
 }

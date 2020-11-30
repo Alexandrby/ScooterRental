@@ -2,7 +2,7 @@ package com.senla.controllers;
 
 import com.senla.dto.CityDTO;
 import com.senla.dto.PageDTO;
-import com.senla.service.CityService;
+import com.senla.services.CityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

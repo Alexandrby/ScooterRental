@@ -2,7 +2,7 @@ package com.senla.controllers;
 
 import com.senla.dto.PageDTO;
 import com.senla.dto.SeasonTicketDTO;
-import com.senla.service.SeasonTicketService;
+import com.senla.services.SeasonTicketService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

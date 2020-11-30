@@ -1,26 +1,14 @@
 package com.senla.dto;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 
-
+@Data
 public class PageDTO extends AbstractDTO{
 
     private ArrayList<AbstractDTO> list;
     private Integer totalPages;
 
-    public ArrayList<AbstractDTO> getList() {
-        return list;
-    }
 
-    public void setList(ArrayList<AbstractDTO> list) {
-        this.list = list;
-    }
-
-    public Integer getTotalPages() {
-        return totalPages;
-    }
-
-    public void setTotalPages(Integer totalPages) {
-        this.totalPages = totalPages;
-    }
 }

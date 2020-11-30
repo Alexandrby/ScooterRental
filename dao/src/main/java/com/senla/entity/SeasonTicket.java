@@ -9,7 +9,6 @@ import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Entity
 @Table(name = "SeasonTicket")
 public class SeasonTicket extends AbstractEntity{

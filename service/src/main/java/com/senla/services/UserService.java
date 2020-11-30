@@ -1,6 +1,6 @@
-package com.senla.service;
+package com.senla.services;
 
-import com.senla.dao.repository.LoginDataRepository;
+import com.senla.repos.LoginDataRepository;
 import com.senla.dto.UserDTO;
 import com.senla.entity.User;
 import com.senla.mapper.UserMapper;

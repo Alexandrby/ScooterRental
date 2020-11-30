@@ -1,4 +1,5 @@
 package com.senla.entity;
+import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import javax.jws.soap.SOAPBinding;
@@ -8,7 +9,6 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Entity
 @Table (name = "profile")
 public class Profile extends AbstractEntity  {
@@ -16,12 +16,18 @@ public class Profile extends AbstractEntity  {
   @Id
   @GeneratedValue(generator = "increment")
   @GenericGenerator(name = "increment", strategy = "increment")
-  private Integer user_id;
+  @Column(name = "profile_id")
+  private Integer profileId;
 
-  @NonNull
-  private String first_name;
+  @NotNull
+  private String role;
 
-  @NonNull
+  @NotNull
+  @Column(name = "first_name")
+  private String firstName;
+
+  @NotNull
+  @Column(name = "second_name")
   private String second_name;
 
   @OneToOne(optional=false, cascade=CascadeType.ALL)

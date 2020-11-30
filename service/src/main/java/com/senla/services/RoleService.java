@@ -1,7 +1,6 @@
-package com.senla.service;
+package com.senla.services;
 
-import com.senla.dao.repository.RoleRepository;
-import com.senla.dto.RoleDTO;
+
 import com.senla.mapper.RoleMapper;
 import com.senla.serviceAPI.AbstractService;
 import org.springframework.stereotype.Service;

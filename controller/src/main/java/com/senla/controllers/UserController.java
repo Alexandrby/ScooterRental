@@ -2,7 +2,7 @@ package com.senla.controllers;
 
 import com.senla.dto.LoginDataDto;
 import com.senla.dto.PageDTO;
-import com.senla.service.LoginDataService;
+import com.senla.services.LoginDataService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

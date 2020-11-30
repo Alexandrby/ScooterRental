@@ -1,5 +1,4 @@
 package com.senla.repos;
-
 import com.senla.entity.RentStory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

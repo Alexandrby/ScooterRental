@@ -19,7 +19,7 @@ public class SeasonTicketMapper implements MapperAPI<SeasonTicket, SeasonTicketD
     public SeasonTicketDTO toDto(SeasonTicket seasonTicket) {
         if(toDTOTypeMap == null){
             toDTOTypeMap = modelMapper.createTypeMap(SeasonTicket.class, SeasonTicketDTO.class);}
-        toDTOTypeMap.addMappings(mapping -> mapping.map(singleSeasonTicket -> seasonTicket.getUser().getUserId(), SeasonTicketDTO::setUserId));
+        toDTOTypeMap.addMappings(mapping -> mapping.map(singleSeasonTicket -> seasonTicket.getProfile().getUser_id(), SeasonTicketDTO::setProfileId));
         return Objects.isNull(seasonTicket) ? null : modelMapper.map(seasonTicket, SeasonTicketDTO.class);
     }
 

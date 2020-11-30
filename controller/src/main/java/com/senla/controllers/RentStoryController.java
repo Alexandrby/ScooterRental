@@ -2,7 +2,7 @@ package com.senla.controllers;
 
 import com.senla.dto.PageDTO;
 import com.senla.dto.RentStoryDTO;
-import com.senla.service.RentStoryService;
+import com.senla.services.RentStoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

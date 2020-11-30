@@ -1,66 +1,33 @@
 package com.senla.dto;
 
 import lombok.Data;
+import org.springframework.core.SpringVersion;
+
+import java.util.List;
 
 @Data
 public class ProfileDTO extends AbstractDTO{
 
-    private Integer userId;
+    private Integer profileId;
     private String firstName;
     private String secondName;
+    private String role;
     private Integer discountId;
-    private Integer loginDataId;
 
-    public ProfileDTO() {
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        setDtoId(userId);
-        this.userId = userId;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getSecondName() {
-        return secondName;
-    }
-
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
-    }
-
-    public Integer getDiscountId() {
-        return discountId;
-    }
-
-    public void setDiscountId(int discountId) {
-        this.discountId = discountId;
-    }
-
-    public Integer getLoginDataId() {
-        return loginDataId;
-    }
+    /*
 
     public void setLoginDataId(int loginDataId) {
         this.loginDataId = loginDataId;
+
+         public List<Integer> getRoles() {
+        return roles;
     }
 
-    @Override
-    public String toString() {
-        return "UserDTO{" +
-                "Id='" + userId + '\'' +
-                "firstName='" + firstName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                '}';
-    }
+    public void setRoles(List<Role> roles) {
+        for (Role role: roles) {
+         this.roles.add(role.getRoleId());
+        }
+    }*/
+
+
 }
