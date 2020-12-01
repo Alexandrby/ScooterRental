@@ -20,8 +20,10 @@ public class ProfileMapper implements MapperAPI<Profile, ProfileDTO>{
         if (toDTOTypeMap == null) {
             toDTOTypeMap = modelMapper.createTypeMap(Profile.class, ProfileDTO.class);
         }
-        toDTOTypeMap.addMappings(mapping -> mapping.map(/*singleSeasonTicket*/ -> profile.getDiscount().getDiscountId(), ProfileDTO::setDiscountId));
-  //      toDTOTypeMap.addMappings(mapping -> mapping.map(singleSeasonTicket -> profile.getLoginData().getLoginId(), UserDTO::setLoginDataId));
+        toDTOTypeMap.addMappings(mapping -> mapping.map(mapDiscountId -> profile.getDiscount().getDiscountId(), ProfileDTO::setDiscountId));
+        toDTOTypeMap.addMappings(mapping -> mapping.map(mappedSeasonTicketId -> profile.getSeasonTicket().getSeasonTicketId(), ProfileDTO::setSeasonTicketId));
+        toDTOTypeMap.addMappings(mapping -> mapping.map(mappedUserId -> profile.getUser().getUserId(), ProfileDTO::setUserId));
+        toDTOTypeMap.addMappings(mapping -> mapping.map(mappedRentStoryId -> profile.getRentStoryList(), ProfileDTO::setRentStoryId)); //?
         return Objects.isNull(profile) ? null : modelMapper.map(profile, ProfileDTO.class);
     }
 

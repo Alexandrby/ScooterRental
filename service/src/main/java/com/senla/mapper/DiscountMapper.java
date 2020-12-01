@@ -5,7 +5,6 @@ import com.senla.entity.Discount;
 import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.Objects;
 
 @Component
@@ -19,7 +18,7 @@ public class DiscountMapper implements MapperAPI<Discount, DiscountDTO> {
     public DiscountDTO toDto(Discount discount) {
         if(typeMap == null){
         typeMap = modelMapper.createTypeMap(Discount.class, DiscountDTO.class);}
-        typeMap.addMappings(mapping -> mapping.map(discount1 -> discount.getProfile().getUser_id(), DiscountDTO::setUserId));
+        typeMap.addMappings(mapping -> mapping.map(mappedDiscountId -> discount.getProfile().getProfileId(), DiscountDTO::setProfileId));
         return Objects.isNull(discount) ? null : modelMapper.map(discount, DiscountDTO.class);
     }
 

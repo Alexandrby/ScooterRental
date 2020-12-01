@@ -28,7 +28,7 @@ public class Profile extends AbstractEntity  {
 
   @NotNull
   @Column(name = "second_name")
-  private String second_name;
+  private String secondName;
 
   @OneToOne(optional=false, cascade=CascadeType.ALL)
   @JoinColumn (name = "discount_id")
