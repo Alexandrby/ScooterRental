@@ -1,7 +1,7 @@
 package com.senla.services;
 
 
-import com.senla.CityDTO;
+import com.senla.dto.CityDTO;
 import com.senla.entity.City;
 import com.senla.mapper.CityMapper;
 import com.senla.repos.CityRepository;

@@ -1,6 +1,6 @@
 package com.senla.services;
 
-import com.senla.repos.LoginDataRepository;
+
 import com.senla.dto.UserDTO;
 import com.senla.entity.User;
 import com.senla.mapper.UserMapper;
@@ -20,17 +20,6 @@ public class UserService extends AbstractService<User, UserDTO, UserRepository, 
         this.passwordEncoder = passwordEncoder;
     }
 
-    public User findByLogin(String login) {
-        return repository.findByLogin(login);
-    }
 
-    public User findByLoginAndPassword(String login, String password) {
-        User user = findByLogin(login);
-        if (user != null) {
-            if (passwordEncoder.matches(password, user.getPassword())) {
-                return user;
-            }
-        }
-        return null;
-    }
+
 }

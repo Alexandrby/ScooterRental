@@ -15,6 +15,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+
                 <configuration>
                     <source>14</source>
                     <target>14</target>
@@ -36,7 +37,7 @@
             <version>8.0.20</version>
         </dependency>
 
-        <!--    solve for  reading hibernate.cfg.xml with java 11-->
+        <!-- solve for  reading hibernate.cfg.xml with java 11-->
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
@@ -66,11 +67,6 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.25</version>
-        </dependency>
-        <dependency>
-            <groupId>org.liquibase</groupId>
-            <artifactId>liquibase-core</artifactId>
-            <version>3.4.1</version>
         </dependency>
         <dependency>
             <groupId>org.modelmapper</groupId>

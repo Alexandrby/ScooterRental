@@ -25,7 +25,7 @@ public class CityController {
     @GetMapping("/user/city/{id}")
     public ResponseEntity<CityDTO> getCityById(@PathVariable int id) {
         logger.info("find a city by id {}", id);
-        return new ResponseEntity<>(service.getOne(id), HttpStatus.OK);
+        return new ResponseEntity<CityDTO>(service.getOne(id), HttpStatus.OK);
     }
 
     @GetMapping("/user/city")
