@@ -1,6 +1,8 @@
 package com.senla.entity;
 
-//@MappedSuperclass
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public class AbstractEntity {
 
 
