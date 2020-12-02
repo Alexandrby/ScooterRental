@@ -9,7 +9,7 @@ public class RentStoryDTO extends AbstractDTO{
     private Integer rentDuration;
     private Integer Money;
     private String paidWay;
-    private Integer userId;
+    private Integer profileId;
     private Integer scooterId;
 
 

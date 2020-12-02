@@ -1,6 +1,5 @@
 package com.senla.services;
 
-
 import com.senla.dto.SeasonTicketDTO;
 import com.senla.entity.SeasonTicket;
 import com.senla.mapper.SeasonTicketMapper;

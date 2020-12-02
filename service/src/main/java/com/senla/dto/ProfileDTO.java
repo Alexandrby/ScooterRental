@@ -1,9 +1,9 @@
 package com.senla.dto;
 
-import com.senla.entity.SeasonTicket;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-
+@EqualsAndHashCode(callSuper=false)
 @Data
 public class ProfileDTO extends AbstractDTO{
 
@@ -12,7 +12,7 @@ public class ProfileDTO extends AbstractDTO{
     private String secondName;
     private String role;
     private Integer discountId;
-    private SeasonTicket seasonTicketId;
+    private Integer seasonTicketId;
     private Integer userId;
     private Integer rentStoryId;
 

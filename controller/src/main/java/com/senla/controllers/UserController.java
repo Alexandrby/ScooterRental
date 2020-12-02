@@ -1,8 +1,8 @@
 package com.senla.controllers;
 
-import com.senla.dto.LoginDataDto;
 import com.senla.dto.PageDTO;
-import com.senla.services.LoginDataService;
+import com.senla.dto.UserDTO;
+import com.senla.services.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,15 +15,15 @@ public class UserController {
 
     private Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    private LoginDataService service;
+    private UserService service;
 
     @Autowired
-    public UserController(LoginDataService service) {
+    public UserController(UserService service) {
         this.service = service;
     }
 
     @GetMapping("/user/loginData/{id}")
-    public ResponseEntity<LoginDataDto> getLoginDataById(@PathVariable int id) {
+    public ResponseEntity<UserDTO> getLoginDataById(@PathVariable int id) {
         logger.info("find a LoginData by id {}", id);
         return new ResponseEntity<>(service.getOne(id), HttpStatus.OK);
     }
@@ -35,13 +35,13 @@ public class UserController {
     }
 
     @PostMapping("/admin/loginData")
-    public ResponseEntity<LoginDataDto> saveLoginData(@RequestBody LoginDataDto loginDataDto) {
+    public ResponseEntity<UserDTO> saveLoginData(@RequestBody UserDTO loginDataDto) {
         logger.info("save LoginData -- {}", loginDataDto);
         return new ResponseEntity<>(service.save(loginDataDto), HttpStatus.CREATED);
     }
 
     @PutMapping("/admin/loginData")
-    public ResponseEntity<LoginDataDto> updateLoginData(@RequestBody LoginDataDto loginDataDto) {
+    public ResponseEntity<UserDTO> updateLoginData(@RequestBody UserDTO loginDataDto) {
         logger.info("update LoginData -- {}", loginDataDto);
         return new ResponseEntity<>(service.update(loginDataDto), HttpStatus.OK);
     }

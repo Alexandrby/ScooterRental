@@ -19,7 +19,7 @@ public class ScooterMapper implements MapperAPI<Scooter, ScooterDTO> {
     public ScooterDTO toDto(Scooter scooter) {
         if(toDTOTypeMap == null){
             toDTOTypeMap = modelMapper.createTypeMap(Scooter.class, ScooterDTO.class);}
-        toDTOTypeMap.addMappings(mapping -> mapping.map(singleScooter -> scooter.getRentPoint().getRent_point_id(), ScooterDTO::setRentPointId));
+        toDTOTypeMap.addMappings(mapping -> mapping.map(mappedRentPointId -> scooter.getRentPoint().getRentPointId(), ScooterDTO::setRentPointId));
         return Objects.isNull(scooter) ? null : modelMapper.map(scooter, ScooterDTO.class);
     }
 

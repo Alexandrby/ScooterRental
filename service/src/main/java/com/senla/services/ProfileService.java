@@ -1,6 +1,5 @@
 package com.senla.services;
 
-
 import com.senla.dto.UserDTO;
 import com.senla.entity.User;
 import com.senla.mapper.UserMapper;
