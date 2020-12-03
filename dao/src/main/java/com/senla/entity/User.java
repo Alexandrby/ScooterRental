@@ -24,6 +24,9 @@ public class User extends AbstractEntity {
     @NotNull
     private String password;
 
+    @NotNull
+    private String role;
+
     @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
     @JsonIgnore
     private Profile profile;

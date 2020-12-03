@@ -19,8 +19,6 @@ public class Profile extends AbstractEntity  {
   @Column(name = "profile_id")
   private Integer profileId;
 
-  @NotNull
-  private String role;
 
   @NotNull
   @Column(name = "first_name")

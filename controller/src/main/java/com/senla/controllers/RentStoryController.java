@@ -35,12 +35,12 @@ public class RentStoryController {
         return new ResponseEntity<>(pageDTO, HttpStatus.OK);
     }
 
-    @GetMapping("/user/rentStory/")
+   /* @GetMapping("/user/rentStory/")
     public ResponseEntity<PageDTO> getAllRentStoriesByUser(@RequestParam(value = "page") int page,
                                                            @RequestParam(value = "user") int user) {
         logger.info("find all RentStories by user id");
         return new ResponseEntity<>(service.findByUserId(user, page), HttpStatus.OK);
-    }
+    }*/
 
     @PostMapping("/admin/rentStory")
     public ResponseEntity<RentStoryDTO> saveRentStory(@RequestBody RentStoryDTO rentStoryDTO) {

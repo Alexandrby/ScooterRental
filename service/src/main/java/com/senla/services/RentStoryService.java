@@ -21,12 +21,12 @@ public class RentStoryService extends AbstractService<RentStory, RentStoryDTO, R
         super(repository, mapper);
     }
 
-    public PageDTO findByUserId(int userId, int page) {
+   /* public PageDTO findByUserId(int userId, int page) {
         Page<RentStory> ePage = repository.findAllByUserUserIdLike(userId, PageRequest.of(page, 10 ));
 
         PageDTO pageDTO = new PageDTO();
         pageDTO.setList(ePage.getContent().stream().map(mapper::toDto).collect(Collectors.toCollection(ArrayList::new)));
         pageDTO.setTotalPages(ePage.getTotalPages());
         return pageDTO;
-    }
+    }*/
 }

@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RentStoryRepository extends CommonRepository<RentStory> {
 
-   Page<RentStory> findAllByUserUserIdLike(int userId, Pageable pageable);
+
 }

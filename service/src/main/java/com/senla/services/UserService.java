@@ -1,3 +1,4 @@
+
 package com.senla.services;
 
 
@@ -13,11 +14,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService extends AbstractService<User, UserDTO, UserRepository, UserMapper> {
 
-    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository repository, UserMapper mapper, @Autowired PasswordEncoder passwordEncoder ) {
+
+    public UserService(UserRepository repository, UserMapper mapper ) {
         super(repository, mapper);
-        this.passwordEncoder = passwordEncoder;
+
     }
 
 
