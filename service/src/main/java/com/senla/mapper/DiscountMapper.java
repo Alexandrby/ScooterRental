@@ -10,12 +10,9 @@ import java.util.Objects;
 @Component
 public class DiscountMapper implements MapperAPI<Discount, DiscountDTO> {
 
-    private final MainMapper modelMapper;
+    @Autowired
+    private  MainMapper modelMapper;
     private TypeMap<Discount, DiscountDTO> typeMap;
-
-    public DiscountMapper(MainMapper modelMapper) {
-        this.modelMapper = modelMapper;
-    }
 
     @Override
     public DiscountDTO toDto(Discount discount) {

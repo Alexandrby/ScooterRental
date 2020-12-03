@@ -12,7 +12,7 @@ import java.util.Objects;
 public class RentPointMapper implements MapperAPI<RentPoint, RentPointDTO> {
 
     @Autowired
-    private com.senla.mapper.MainMapper modelMapper;
+    private MainMapper modelMapper;
 
     private TypeMap<RentPoint, RentPointDTO> toDTOTypeMap;
 

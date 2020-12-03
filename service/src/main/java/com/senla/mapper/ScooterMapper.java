@@ -5,7 +5,6 @@ import com.senla.entity.Scooter;
 import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.Objects;
 
 @Component
