@@ -14,5 +14,4 @@ public interface CommonService<D> {
 
     void deleteById(Integer id);
 
-
 }

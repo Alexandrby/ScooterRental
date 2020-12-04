@@ -6,7 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 
-
+@EqualsAndHashCode(callSuper=false)
 @Data
 @NoArgsConstructor
 @Entity
