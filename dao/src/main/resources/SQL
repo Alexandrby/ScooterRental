@@ -128,3 +128,24 @@ CREATE TABLE `scooterdb`.`profile` (
                            KEY `discount_id_idx` (`discount_id`),
                            CONSTRAINT `fk_discount_id` FOREIGN KEY (`discount_id`) REFERENCES `discount` (`discount_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- -----------------------------------------------------
+-- Table `scooterdb`.`user_role`
+-- -----------------------------------------------------
+
+DROP TABLE IF EXISTS `scooterdb`.`user_role`;
+CREATE TABLE `scooterdb`.`user_role` (
+                                         `user_id` INT NOT NULL,
+                                         `role_id` INT NOT NULL,
+                                         INDEX `fk_user_role_user1_idx` (`user_id` ASC) VISIBLE,
+                                         INDEX `fk_user_role_role1_idx` (`role_id` ASC) VISIBLE,
+                                         CONSTRAINT `fk_user_role_user1`
+                                             FOREIGN KEY (`user_id`)
+                                                 REFERENCES `scooterdb`.`user` (`user_id`)
+                                                 ON DELETE NO ACTION
+                                                 ON UPDATE NO ACTION,
+                                         CONSTRAINT `fk_user_role_role1`
+                                             FOREIGN KEY (`role_id`)
+                                                 REFERENCES `scooterdb`.`role` (`role_id`)
+                                                 ON DELETE NO ACTION
+                                                 ON UPDATE NO ACTION);

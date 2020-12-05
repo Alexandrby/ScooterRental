@@ -31,7 +31,7 @@ public class RegistrationController {
     @PostMapping("/auth")
     public ResponseEntity auth(@RequestBody UserDTO request) {
         User user = userService.findByLoginAndPassword(request.getLogin(), request.getPassword());
-        String token = jwtTokenProvider.createToken(user.getLogin(),user.getRole());
+        String token = jwtTokenProvider.createToken(user.getLogin());
         return new ResponseEntity(token, HttpStatus.OK);
     }
 }

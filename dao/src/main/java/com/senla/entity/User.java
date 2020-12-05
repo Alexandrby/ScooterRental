@@ -3,7 +3,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
+import java.util.List;
 
 
 @EqualsAndHashCode(callSuper=false)
@@ -11,7 +14,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "user")
-public class User extends AbstractEntity {
+public class User extends AbstractEntity implements GrantedAuthority {
 
     @Id
     @GeneratedValue(generator = "increment")
@@ -24,12 +27,15 @@ public class User extends AbstractEntity {
     @NotNull
     private String password;
 
-    @NotNull
-    private String role;
-
     @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
     @JsonIgnore
     private Profile profile;
+
+    @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinTable(name = "user_role",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private List<Role> roles;
 
     @Override
     public String toString() {
@@ -38,5 +44,10 @@ public class User extends AbstractEntity {
                 ", login='" + login + '\'' +
                 ", profile=" + profile +
                 '}';
+    }
+
+    @Override
+    public String getAuthority() {
+        return getLogin();
     }
 }

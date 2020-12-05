@@ -45,8 +45,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
-    @Bean
+  /*  @Bean
     protected PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder(8);
-    }
+    }*/
 }

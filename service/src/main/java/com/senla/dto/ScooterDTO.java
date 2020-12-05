@@ -10,6 +10,4 @@ public class ScooterDTO extends AbstractDTO{
     private String status;
     private Integer rentPointId;
 
-
-
 }
