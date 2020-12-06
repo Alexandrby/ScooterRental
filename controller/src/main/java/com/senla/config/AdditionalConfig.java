@@ -1,4 +1,4 @@
-package com.senla.security;
+package com.senla.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,3 +12,4 @@ public class AdditionalConfig {
         return new BCryptPasswordEncoder(12);
     }
 }
+
