@@ -20,7 +20,7 @@ DROP TABLE IF EXISTS `scooterdb`.`user`;
 CREATE TABLE `scooterdb`.`user` (
                         `user_id` int NOT NULL AUTO_INCREMENT,
                         `login` varchar(45) NOT NULL,
-                        `password` varchar(45) NOT NULL,
+                        `password` varchar(145) NOT NULL,
                         `profile_id` int NOT NULL,
                         PRIMARY KEY (`user_id`),
                         KEY `profile_id3_idx` (`profile_id`),
@@ -128,6 +128,18 @@ CREATE TABLE `scooterdb`.`profile` (
                            KEY `discount_id_idx` (`discount_id`),
                            CONSTRAINT `fk_discount_id` FOREIGN KEY (`discount_id`) REFERENCES `discount` (`discount_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `scooterdb`.`role`
+-- -----------------------------------------------------
+
+DROP TABLE IF EXISTS `scooterdb`.`role`;
+CREATE TABLE `scooterdb`.`role` (
+  `role_id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- -----------------------------------------------------
 -- Table `scooterdb`.`user_role`
