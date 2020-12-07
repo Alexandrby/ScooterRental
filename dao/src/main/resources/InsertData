@@ -7,4 +7,5 @@ INSERT INTO `rentstory` VALUES (1,2,1,5,25,'cash'),(2,3,2,23,115,'card'),(3,5,3,
 INSERT INTO `role` VALUES (1,'user'),(2,'admin');
 INSERT INTO `scooter` VALUES (1,2,'Suzuki','FREE'),(2,1,'Yamaha','RENTED'),(3,3,'Honda','CHARGING'),(4,4,'Mercedes','FREE'),(5,5,'Honda','BROKEN');
 INSERT INTO `seasonticket` VALUES (1,6,5,2),(2,12,4,3),(3,24,3,1);
-INSERT INTO `user` VALUES (1,'user','$2y$12$Y7S6wd/16KdxxXJPRsxnkeyHR2K/Qzza8mdPaaT151H6KQHPosfvy ',1),(2,'admin','$2y$12$Y7S6wd/16KdxxXJPRsxnkeyHR2K/Qzza8mdPaaT151H6KQHPosfvy ',2);
+INSERT INTO `user` VALUES (1,'user','$2y$12$Y7S6wd/16KdxxXJPRsxnkeyHR2K/Qzza8mdPaaT151H6KQHPosfvy',1),(2,'admin','$2y$12$Y7S6wd/16KdxxXJPRsxnkeyHR2K/Qzza8mdPaaT151H6KQHPosfvy',2);
+INSERT INTO `user_role` VALUES (1,1),(1,2));

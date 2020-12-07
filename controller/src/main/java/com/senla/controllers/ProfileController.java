@@ -29,9 +29,9 @@ public class ProfileController {
     }
 
     @GetMapping("/user/users")
-    public ResponseEntity<PageDTO> getAllUsers(@RequestParam(value = "page") int page) {
+    public ResponseEntity<UserController> getAllUsers(@RequestParam(value = "page") int page) {
         logger.info("find all users");
-        return new ResponseEntity<>(service.getAll(page), HttpStatus.OK);
+        return new ResponseEntity(service.getAll(page), HttpStatus.OK);
     }
 
     @PostMapping("/admin/users")
